@@ -1,0 +1,67 @@
+.batches {
+    display: flex;
+    justify-content: center;
+    gap: 3.9375rem;
+    flex-wrap: wrap;
+    padding: 0 3.5rem;
+
+    @media (min-width: 769px) {
+        justify-content: flex-start;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 15.375rem;
+        height: 22rem;
+        border-radius: 1.375rem;
+        cursor: pointer;
+        overflow: hidden;
+        transition: .2s ease-in;
+        background: linear-gradient(var(--background-color), var(--gradient-color));
+        padding: 2rem 1rem;
+
+        &:hover {
+            box-shadow: .4rem .4rem 1rem var(--hover-color);
+        }
+
+        &__btn {
+            width: 50%;
+            padding: .6rem 0;
+            text-align: center;
+            border-radius: 2.25rem;
+            background: #2D7E92;
+            background: var(--btn-color);
+            color: white;
+        }
+
+        h3 {
+            color: var(--text-color);
+            font-size: 1.5625rem;
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+
+        &__photo {
+            position: relative;
+
+            &__3d {
+                position: absolute;
+                right: -3rem;
+                top: 2rem;
+                z-index: 10;
+            }
+
+            &__ellipse {
+                width: 9rem;
+                height: 9rem;
+                background-color: var(--ellipse-color);
+                border: 0.6rem solid #1A2E3B;
+                border-radius: 50%;
+                position: absolute;
+                right: -20%;
+                top: 8rem;
+            }
+        }
+    }
+}

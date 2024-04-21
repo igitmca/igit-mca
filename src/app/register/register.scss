@@ -1,0 +1,88 @@
+.register__container {
+    // height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #1A1A1E;
+    padding-top: 3rem;
+    @media (min-width: 1024px) { 
+        height: 100vh;
+        padding-top: 0;
+        grid-template-columns: 1fr 1fr;
+        height: 100vh;
+    }
+    &__left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: rgb(26, 26, 30);
+        position: relative;
+        z-index: 10;
+        &__image{
+            position: relative;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &__bg {
+                width: 17.813rem;
+                height: 17.813rem;
+                border-radius: 50%;
+                opacity: 0.6;
+                background-color: #F8D893;
+                filter: blur(158.5px);
+                position: absolute;
+                z-index: 1;
+                right: 10%;
+                bottom: 0;
+            }
+        }
+
+        h1 {
+            
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 2.375rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+
+
+        }
+    }
+
+    &__right {
+        padding: 2rem 1rem 2rem;
+        background: #2B2A31;
+        border-radius: 2rem 0 0 0;
+        position: relative;
+        z-index: 10;
+        @media (min-width: 768px) {
+            padding: 4rem 3rem 4rem;
+            border-radius: 2rem 0 0 2rem;
+        }
+        &__form {
+            margin-top: 2.5rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            @media (min-width: 768px) {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+            &__input {
+
+                input,
+                button[role="combobox"] {
+                    margin-top: .5rem;
+                }
+            }
+
+        }
+
+        &__logodiv {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
